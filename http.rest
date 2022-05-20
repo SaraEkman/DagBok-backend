@@ -1,0 +1,26 @@
+GET http://localhost:3000/post
+
+###
+
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "title": "h",
+    "content": "Gj"
+}
+
+###
+
+PUT http://localhost:3000/post
+Content-Type: application/json
+
+{   
+    "_id": "6287b805385640c372583f3d",
+    "title": "Resa",
+    "content": "Åka hoj runt joden"
+}
+
+###
+
+DELETE http://localhost:3000/post/6287b8e67a7ef5207ded0e98
