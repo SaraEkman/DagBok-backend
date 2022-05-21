@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+let host = '0.0.0.0';
 
 const mongoose = require('mongoose');
 const postRouter = require('./routes/post-route');
@@ -17,6 +18,6 @@ const initAtlas = async () => {
         await mongoose.connect('mongodb+srv://sara:hel9514@mycluster.7osmm.mongodb.net/?retryWrites=true&w=majority');
         console.log('connected to database');
     } catch (err) { console.error('error', err); }
-    app.listen(PORT, () => console.log(`Server is up and running on port: ${PORT}`));
+    app.listen(PORT, host, () => console.log(`Server is up and running on port: ${PORT}`));
 };
 initAtlas()
