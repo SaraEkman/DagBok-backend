@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const PostModel = require('../modules/post_model');
-const cors = require('cors')
-router.use(cors())
-// {
-//     "origin": "*",
-//         "methods": ["GET", "POST", "PUT", "DELETE"];
-// }
+const cors = require('cors');
+router.use(cors({
+    "origin": "http://127.0.0.1:5500/Dagbok/index.html",
+    "methods": ["GET", "POST", "PUT", "DELETE"]
+}));
+
 
 router.get('/', async (req, res) => {
     const posts = await PostModel.find();
@@ -32,7 +32,7 @@ router.put('/', async (req, res) => {
 router.delete('/', async (req, res) => {
 
     const { _id } = req.body;
-   
+
     await PostModel.findByIdAndDelete({ _id });
     res.status(200).json({ 'status': 'Product successfully deleted' });
 });
