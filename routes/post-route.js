@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const PostModel = require('../modules/post_model');
+const cors = require('cors')
+router.use(cors())
+
 
 router.get('/', async (req, res) => {
     const posts = await PostModel.find();

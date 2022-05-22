@@ -12,13 +12,13 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3000/post
+PUT https://myblogwithmongoose.herokuapp.com/post
 Content-Type: application/json
 
 {   
-    "_id": "6287b805385640c372583f3d",
-    "title": "Resa",
-    "content": "Åka hoj runt joden"
+    "_id": "62895c566cc7336293d08e74",
+    "title": "aaa",
+    "content": "aaaaaaaa"
 }
 
 ###
