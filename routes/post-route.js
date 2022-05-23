@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const PostModel = require('../modules/post_model');
 const cors = require('cors');
-router.use(cors({
-    "origin": "http://127.0.0.1:5500/Dagbok/index.html",
-    "methods": ["GET", "POST", "PUT", "DELETE"]
-}));
-
+router.use(cors());
+// {
+//     "origin": "http://127.0.0.1:5500/Dagbok/index.html",
+//         "methods": ["GET", "POST", "PUT", "DELETE"];
+// }
 
 router.get('/', async (req, res) => {
     const posts = await PostModel.find();

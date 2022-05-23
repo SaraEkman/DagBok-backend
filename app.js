@@ -8,10 +8,12 @@ const postRouter = require('./routes/post-route');
 const userRouter = require('./routes/user-route');
 const cors = require('cors')
 
-app.use(cors({
-    "origin": "http://127.0.0.1:5500/Dagbok/index.html",
-    "methods": ["GET", "POST", "PUT", "DELETE"]
-}))
+app.use(cors());
+
+// {
+//     "origin": "http://127.0.0.1:5500/Dagbok/index.html",
+//         "methods": ["GET", "POST", "PUT", "DELETE"];
+// }
 app.use(express.json());
 app.use('/post', postRouter);
 app.use('/user', userRouter);
