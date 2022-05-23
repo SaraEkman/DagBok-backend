@@ -12,15 +12,20 @@ Content-Type: application/json
 
 ###
 
-PUT https://myblogwithmongoose.herokuapp.com/post
+PUT http://localhost:3000/post
 Content-Type: application/json
 
 {   
-    "_id": "62895c566cc7336293d08e74",
-    "title": "aaa",
-    "content": "aaaaaaaa"
+    "_id": "628b3a27a3a456e867c59de0",
+    "title": "jjj",
+    "content": "jjj"
 }
 
 ###
 
-DELETE http://localhost:3000/post/6287b8e67a7ef5207ded0e98
+DELETE http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "_id":"62897c6d6cc7336293d0906b"
+}
