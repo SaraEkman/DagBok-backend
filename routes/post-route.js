@@ -30,11 +30,14 @@ router.put('/', async (req, res) => {
 });
 
 router.delete('/', async (req, res) => {
-
     const { _id } = req.body;
 
-    await PostModel.findByIdAndDelete({ _id });
-    res.status(200).json({ 'status': 'Product successfully deleted' });
+    if (_id == '') {
+        return res.json({'message': 'id is empty'})
+    } else {
+        await PostModel.findByIdAndDelete({ _id });
+        res.status(200).json({ 'status': 'Product successfully deleted' });
+    }
 });
 
 module.exports = router;

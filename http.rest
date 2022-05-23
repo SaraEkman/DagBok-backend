@@ -27,5 +27,5 @@ DELETE http://localhost:3000/post
 Content-Type: application/json
 
 {
-    "_id":"62897c6d6cc7336293d0906b"
+    "_id":"628b75ea9e98b7931e2ebc9b"
 }
