@@ -6,7 +6,7 @@ let host = '0.0.0.0';
 const mongoose = require('mongoose');
 const postRouter = require('./routes/post-route');
 const userRouter = require('./routes/user-route');
-const cors = require('cors')
+const cors = require('cors');
 
 app.use(cors());
 
@@ -19,8 +19,8 @@ app.use('/post', postRouter);
 app.use('/user', userRouter);
 
 app.get('/', (req, res) => {
-    res.send('Välkommen')
-})
+    res.send('Välkommen');
+});
 
 const initAtlas = async () => {
     try {
@@ -29,4 +29,4 @@ const initAtlas = async () => {
     } catch (err) { console.error('error', err); }
     app.listen(PORT, host, () => console.log(`Server is up and running on port: ${PORT}`));
 };
-initAtlas()
+initAtlas();

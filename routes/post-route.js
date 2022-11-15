@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const post = await PostModel.create(req.body);
-    res.status(200).json({ 'status': 'ok' });
+    res.status(200).json({ 'status': 'ok', 'post': post });
 });
 
 router.put('/', async (req, res) => {
@@ -26,7 +26,7 @@ router.put('/', async (req, res) => {
 
     await post.save();
 
-    res.status(200).json({ 'status': 'ok' });
+    res.status(200).json({ 'status': 'ok', 'post': post });
 });
 
 router.delete('/', async (req, res) => {
